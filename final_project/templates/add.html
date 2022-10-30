@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add{% endblock %}
+
+{% block home %}{% endblock %}
+{% block add %}active{% endblock %}
+
+{% block main %}
+    <h1>Add a new task!</h1>
+    <br>
+    <form action="/add" method="post">
+        <p>What is it to be done?</p>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="task" name="task" placeholder="Enter task here" required type="text">
+        <br>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

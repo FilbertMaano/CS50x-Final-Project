@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1 class="logo"><i class="bi bi-check2-square" width="1em" height="1em"></i>ToDo</h1>
+    <br>
+    <p>Please log in to your account</p>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary mx-auto w-auto" type="submit">Log In</button>
+    </form>     
+    <br>
+    <p>Don't have an account? <a href="/register" class="link-info">Register here</a></p>
+{% endblock %}

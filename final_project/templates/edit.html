@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block main %}
+    <h1>Edit {{todo.task}}</h1>
+    <br>
+    <form action="/{{todo.id}}/edit" method="post">
+        <input autocomplete="off" class="form-control mx-auto w-auto" id="task" name="task" placeholder="{{todo.task or 'Task'}}" required type="text" value="{{todo.task}}">
+        <br>
+        <input type="checkbox" name="completed" {% if todo.completed == 'yes' %}checked{% endif %}>
+        <label for="completed">Task completed?</label>
+        <br><br>
+        <button class="btn btn-primary" type="submit">Edit</button>
+        <input formaction="/{{todo.id}}/delete" method="POST" class="btn btn-danger" type="submit" value="Delete">
+    </form> 
+{% endblock %}

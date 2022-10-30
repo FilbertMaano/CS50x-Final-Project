@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    {% if todos %}
+        <h1>Start doing and you can complete all these tasks!</h1>
+        <br>
+        {% for todo in todos %}
+        <a href="{{ url_for('edit', id=todo.id) }}" class="task mx-auto">
+            <div class="ms-auto">
+                <form action="{{ url_for('completed', id=todo.id) }}" method="POST">
+                    <h5><input type="checkbox" name="completed" onchange="submit()"> {{ todo.task }}</h5>
+                </form>
+            </div>
+        </a>
+        {% endfor %}
+    {% else %}
+        <h1>Congratulations you don't have any task/to-do for today! You can add more by clicking the add button!</h1>
+    {% endif %}    
+{% endblock %}

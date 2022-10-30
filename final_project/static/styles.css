@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Silkscreen', cursive;
+    font-size: 5rem;
+}
+
+.nav-item {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Silkscreen';
+    text-align: center;
+    font-size: 50px;
+}
+
+.task {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 16px;
+    padding: 24px;
+    position: relative;
+    text-decoration: none;
+    width: 60%;
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    position: relative;
+    color: black;
+    top: 0;
+    transition: top ease 0.25s;
+}
+
+.task h5 {
+    text-align: left;
+}
+
+.task:hover {
+    text-decoration: none;
+    color: black;
+    top: -5px;
+}
+
